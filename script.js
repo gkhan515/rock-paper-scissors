@@ -9,8 +9,6 @@ function getComputerChoice () {
   }
 }
 
-let playerSelection = "rOcK"
-
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
 
@@ -18,20 +16,38 @@ function playRound(playerSelection, computerSelection) {
       (playerSelection === "paper" && computerSelection === "rock") ||
       (playerSelection === "scissors" && computerSelection === "paper")) {
     console.log(`You win! ${playerSelection} beats ${computerSelection}`)
+    return 1;
   }
 
-  else if ((playerSelection === "rock" && computerSelection === "paper") ||
+  if ((playerSelection === "rock" && computerSelection === "paper") ||
       (playerSelection === "paper" && computerSelection === "scissors") ||
       (playerSelection === "scissors" && computerSelection === "rock")) {
     console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+    return 0;
   }
 
-  else if (playerSelection === computerSelection){
+  if (playerSelection === computerSelection){
     console.log("It's a draw!")
+    return 0;
   }
 
-  else
-    console.log("you have entered nonsense")
+  console.log("you have entered nonsense");
+  return 0;
 }
 
-playRound(playerSelection, getComputerChoice());
+function game () {
+  let wins = 0;
+  let losses = 0;
+  for(let i = 0;i < 5;i++) {
+    let playerSelection = prompt("Rock, paper, or scissors?")
+    if (playRound(playerSelection, getComputerChoice()))
+      wins++;
+    else
+      losses++;
+  }
+  console.log(`Player: ${wins}`);
+  console.log(`Computer: ${losses}`);
+  console.log(wins > losses ? "You win!":"You lose!");
+}
+
+game()
