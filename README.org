@@ -1,3 +1,5 @@
 #+title: Rock-Paper-Scissors
 
-description
+A simple implementation of rock-paper-scissors (runs entirely in the console).
+
+https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
