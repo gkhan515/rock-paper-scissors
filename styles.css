@@ -1,0 +1,51 @@
+html, body {
+    background-color: #282c34;
+    color: #abb2bf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #282c34;
+    color: #abb2bf;
+    border: 2px solid #abb2bf;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 25px;
+    margin: 0 16px 0 16px;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 32px;
+}
+
+.images * {
+    margin: 0 36px 0 36px;
+}
+
+.images h1 {
+    font-size: 80px;
+}
+
+.result {
+    margin: 0;
+}
+
+.scores {
+    display: flex;
+    gap: 200px;
+}
